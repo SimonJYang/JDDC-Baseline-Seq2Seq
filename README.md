@@ -1,37 +1,37 @@
 ## JD Dialog Challenge
 
 
-## ¹ØÓÚ¸Ã»ùÏß
-#¸Ã»ùÏßÊÇJD.com¹ØÓÚJD Dialog Challenge´óÈüÏò¹ã´ó²ÎÈüÑ¡ÊÖÃÇÌá¹©µÄ¿ªÔ´»ùÏß´úÂë£¬ÓÃµ½µÄÄ£ĞÍÎª£ºSeq2Seq£¬¸Ã»ùÏß½ö×÷²Î¿¼¡£
-#working_dir: (1).ÑµÁ·Ö®ºóµÄÄ£ĞÍ±£´æÎÄ¼ş  (2).´ÊµäÎÄ¼ş
-#data: (1).Ô­ÑµÁ·ÓïÁÏ, path£ºdata/chat.txt  (2).Êı¾İÇåÏ´Ö®ºóµÄÑµÁ·ÓïÁÏ£ºtrain.enc¡¢train.dec¡¢test.enc¡¢test.dec (3).²âÊÔÄ£ĞÍÊı¾İ£¬²âÊÔÎÊÌâtest.txtºÍÊä³ö½á¹ûresult.txt£¬path£ºdata/test/
-#seq2seq.ini: ²ÎÊıÅäÖÃÎÄ¼ş
-#dataProcessing.py: Êı¾İÇåÏ´ÎÄ¼ş
-#»ùÏß´úÂëÎÄ¼ş£ºdata_utils.py¡¢seq2seq_model.py¡¢execute.py
+## å…³äºè¯¥åŸºçº¿
+#è¯¥åŸºçº¿æ˜¯JD.comå…³äºJD Dialog Challengeå¤§èµ›å‘å¹¿å¤§å‚èµ›é€‰æ‰‹ä»¬æä¾›çš„å¼€æºåŸºçº¿ä»£ç ï¼Œç”¨åˆ°çš„æ¨¡å‹ä¸ºï¼šSeq2Seqï¼Œè¯¥åŸºçº¿ä»…ä½œå‚è€ƒã€‚
+#working_dir: (1).è®­ç»ƒä¹‹åçš„æ¨¡å‹ä¿å­˜æ–‡ä»¶  (2).è¯å…¸æ–‡ä»¶
+#data: (1).åŸè®­ç»ƒè¯­æ–™, pathï¼šdata/chat.txt  (2).æ•°æ®æ¸…æ´—ä¹‹åçš„è®­ç»ƒè¯­æ–™ï¼štrain.encã€train.decã€test.encã€test.dec (3).æµ‹è¯•æ¨¡å‹æ•°æ®ï¼Œæµ‹è¯•é—®é¢˜test.txtå’Œè¾“å‡ºç»“æœresult.txtï¼Œpathï¼šdata/test/
+#seq2seq.ini: å‚æ•°é…ç½®æ–‡ä»¶
+#dataProcessing.py: æ•°æ®æ¸…æ´—æ–‡ä»¶
+#åŸºçº¿ä»£ç æ–‡ä»¶ï¼šdata_utils.pyã€seq2seq_model.pyã€execute.py
 
 
-## ¹ØÓÚÊı¾İ
-#±¾»ùÏß´úÂëµ±Ç°ÑµÁ·ÓïÁÏ¹²¼Æ1Íò¸öseesion»á»°µÄÊı¾İ£¨path£ºdata/chat.txt£©£¬¸ÃÊı¾İÊÇÔÚ¾©¶«¹«Ë¾¿Í·şºÍ¿Í»§µÄÕæÊµÁÄÌìÊı¾İÉÏ×öÁËÍÑÃô´¦ÀíºóµÄÊı¾İ¡£
-#train.enc¡¢train.dec¡¢test.enc¡¢test.dec×÷ÎªÄ£ĞÍµÄÑµÁ·ÓïÁÏ£¬¶¼ÊÇ»ùÓÚÎÄ¼şchat.txt×öµÄÊı¾İÇåÏ´£¬encÎÄ¼şÃ¿ĞĞÊı¾İÊÇÍ¬Ò»»á»°ÖĞµÄQAQAQ£¬decÎÄ¼şÃ¿ĞĞÊı¾İÊÇÍ¬Ò»»á»°ÖĞµÄA£¬Q±íÊ¾ÓÃ»§»Ø´ğ£¬A±íÊ¾¿Í·ş/»úÆ÷ÈË»Ø´ğ£¬¾ßÌåÊµÏÖ¿É²Î¿¼Êı¾İ´¦ÀíÎÄ¼şdataProcessing.py
+## å…³äºæ•°æ®
+#æœ¬åŸºçº¿ä»£ç å½“å‰è®­ç»ƒè¯­æ–™å…±è®¡1ä¸‡ä¸ªseesionä¼šè¯çš„æ•°æ®ï¼ˆpathï¼šdata/chat.txtï¼‰ï¼Œè¯¥æ•°æ®æ˜¯åœ¨äº¬ä¸œå…¬å¸å®¢æœå’Œå®¢æˆ·çš„çœŸå®èŠå¤©æ•°æ®ä¸Šåšäº†è„±æ•å¤„ç†åçš„æ•°æ®ã€‚
+#train.encã€train.decã€test.encã€test.decä½œä¸ºæ¨¡å‹çš„è®­ç»ƒè¯­æ–™ï¼Œéƒ½æ˜¯åŸºäºæ–‡ä»¶chat.txtåšçš„æ•°æ®æ¸…æ´—ï¼Œencæ–‡ä»¶æ¯è¡Œæ•°æ®æ˜¯åŒä¸€ä¼šè¯ä¸­çš„QAQAQï¼Œdecæ–‡ä»¶æ¯è¡Œæ•°æ®æ˜¯åŒä¸€ä¼šè¯ä¸­çš„Aï¼ŒQè¡¨ç¤ºç”¨æˆ·å›ç­”ï¼ŒAè¡¨ç¤ºå®¢æœ/æœºå™¨äººå›ç­”ï¼Œå…·ä½“å®ç°å¯å‚è€ƒæ•°æ®å¤„ç†æ–‡ä»¶dataProcessing.py
 
 
 ## requirements
-# python3.5
-# tensorflow1.0.0
+#python3.5
+#tensorflow1.0.0
 
 
 ## Train Model
-# edit seq2seq.ini file to set mode = train
+#edit seq2seq.ini file to set mode = train
 python execute.py
 
 
-## Test
-# edit seq2seq.ini file to set mode = test
-#ÊäÈë£ºÊäÈëÎÄ¼ş¸ñÊ½(QAQAQ)£¬path(working_dir/test/test.txt)£¬×¢ÒâÕıÊ½±ÈÈü¿ªÊ¼Ê±»áÓĞ100¸öÎÊÌâ£¬¸Ã»ùÏßÎÄ¼şÖ»¸ø³öÁË50¸öÎÊÌâ
-#Êä³ö£ºÊä³öÎÄ¼ş¸ñÊ½(A)£¬path(working_dir/test/result.txt)
+## Test Model
+#edit seq2seq.ini file to set mode = test
+#è¾“å…¥ï¼šè¾“å…¥æ–‡ä»¶æ ¼å¼(QAQAQ)ï¼Œpath(working_dir/test/test.txt)ï¼Œæ³¨æ„æ­£å¼æ¯”èµ›å¼€å§‹æ—¶ä¼šæœ‰100ä¸ªé—®é¢˜ï¼Œè¯¥åŸºçº¿æ–‡ä»¶åªç»™å‡ºäº†50ä¸ªé—®é¢˜
+#è¾“å‡ºï¼šè¾“å‡ºæ–‡ä»¶æ ¼å¼(A)ï¼Œpath(working_dir/test/result.txt)
 python execute.py
 
 
 ## Notes
-#±¾»ùÏßºóĞø»¹»á³ÖĞø¸üĞÂ
+#æœ¬åŸºçº¿åç»­è¿˜ä¼šæŒç»­æ›´æ–°
 
